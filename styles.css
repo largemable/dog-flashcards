@@ -1,0 +1,44 @@
+html,
+body {
+	margin: 0;
+	height: 100%;
+	font-family: sans-serif;
+	background: rgb(240, 255, 0);
+	background: -moz-linear-gradient(
+		0deg,
+		rgba(240, 255, 0, 1) 0%,
+		rgba(253, 78, 45, 1) 100%
+	);
+	background: -webkit-linear-gradient(
+		0deg,
+		rgba(240, 255, 0, 1) 0%,
+		rgba(253, 78, 45, 1) 100%
+	);
+	background: linear-gradient(
+		0deg,
+		rgba(240, 255, 0, 1) 0%,
+		rgba(253, 78, 45, 1) 100%
+	);
+}
+header {
+	vertical-align: auto;
+	background-color: yellow;
+	border: 5px grey solid;
+	border-radius: 15px;
+	margin: 5vh auto;
+}
+h1,
+h2 {
+	text-align: center;
+}
+main {
+	border: 5px grey solid;
+	border-radius: 15px;
+	height: 50vh;
+}
+div {
+    
+}
+#front {
+
+}
