@@ -1,25 +1,6 @@
 body {
-	/* padding: 5em 5em 0 5em; */
-	/* margin: 0; */
-
 	height: 97vh;
-	font-family: sans-serif;
-	/* background: rgb(240, 255, 0);
-	background: -moz-linear-gradient(
-		0deg,
-		rgba(240, 255, 0, 1) 0%,
-		rgba(253, 78, 45, 1) 100%
-	);
-	background: -webkit-linear-gradient(
-		0deg,
-		rgba(240, 255, 0, 1) 0%,
-		rgba(253, 78, 45, 1) 100%
-	);
-	background: linear-gradient(
-		0deg,
-		rgba(240, 255, 0, 1) 0%,
-		rgba(253, 78, 45, 1) 100%
-	); */
+	/* font-family: sans-serif; */
 }
 
 main {
@@ -30,10 +11,10 @@ main {
 	height: 15vh;
 }
 .B {
-	height: 65vh;
+	height: 55vh;
 }
 .C {
-	height: 15vh;
+	height: 10vh;
 }
 header {
 	display: block;
@@ -70,7 +51,10 @@ main {
 	height: 30em;
 	max-height: 100%;
 }
-
+p {
+	font-size: 50px;
+	height: 5vh;
+}
 button {
 	border: black 1px solid;
 	border-radius: 50%;
@@ -81,6 +65,7 @@ button {
 #front {
 	/* justify-content: center; */
 	width: 30em;
+	margin: 0 auto;
 }
 #dog-image {
 	/* width: 30em; */

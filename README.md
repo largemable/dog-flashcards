@@ -15,3 +15,6 @@
 
 ### roadblocks
 - how can I create keyboard commands in JS?
+- css hover/card flip animation
+- have a card back instead of generating info outside of the image
+- save cards

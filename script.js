@@ -21,7 +21,6 @@ button.addEventListener('click', (event) => {
 			dogImage.addEventListener('click', (event) => {
 				// event.preventDefault();
 				p.innerText = doge.name;
-				//clear innerText when next card is clicked again
 			});
 			// console.log(doge.breeds.name.length);
 		})
