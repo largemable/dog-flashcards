@@ -13,8 +13,11 @@
 - store information onto card
 - have buttons to flip through cards
 
+
+
 ### roadblocks
 - how can I create keyboard commands in JS?
 - css hover/card flip animation
 - have a card back instead of generating info outside of the image
 - save cards
+- have a random feature and a feature you can click back and forth on?

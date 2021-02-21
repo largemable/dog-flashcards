@@ -11,7 +11,7 @@ main {
 	height: 15vh;
 }
 .B {
-	height: 55vh;
+	height: 50vh;
 }
 .C {
 	height: 10vh;
@@ -53,14 +53,23 @@ main {
 }
 p {
 	font-size: 50px;
-	height: 5vh;
+	height: 4vh;
 }
-button {
-	border: black 1px solid;
-	border-radius: 50%;
-	height: 100px;
-	width: 100px;
-	/* padding: 10px; */
+a {
+	display: block;
+	height: 60px;
+	width: 60px;
+	line-height: 60px;
+	-moz-border-radius: 30px; /* or 50% */
+	border-radius: 30px; /* or 50% */
+	background-color: black;
+	color: white;
+	text-align: center;
+	font-size: 2em;
+	margin-top: 2em;
+}
+a:focus {
+	outline: none !important;
 }
 #front {
 	/* justify-content: center; */
@@ -71,4 +80,7 @@ button {
 	/* width: 30em; */
 	border-radius: 12.5%;
 	max-height: 20em;
+}
+.hidden {
+	height: 65px;
 }
