@@ -11,7 +11,7 @@ let p = document.querySelector('p');
 
 button.addEventListener('click', (event) => {
 	button.innerText = 'next';
-	p.innerText = '';
+	p.innerText = 'Click image to reveal breed!';
 	event.preventDefault();
 	console.log('you clicked doggy');
 	fetch(dogApi, {})
@@ -33,7 +33,7 @@ button.addEventListener('click', (event) => {
 });
 
 document.addEventListener('keydown', (event) => {
-	p.innerText = '';
+	p.innerText = 'Click image to reveal breed!';
 	event.preventDefault();
 	console.log('you clicked doggy');
 	if (event.key === 'ArrowRight') {
@@ -63,10 +63,10 @@ console.log('is this thing on?');
 // "save" cards or just remove the cards that user guesses right?
 // multiple choice!
 
-document.addEventListener('keydown', function onPress(event) {
-	if (event.key === 'ArrowRight') {
-		console.log('right');
-	} else if (event.key === 'ArrowLeft') {
-		console.log('left');
-	}
-});
+// document.addEventListener('keydown', function onPress(event) {
+// 	if (event.key === 'ArrowRight') {
+// 		console.log('right');
+// 	} else if (event.key === 'ArrowLeft') {
+// 		console.log('left');
+// 	}
+// });
