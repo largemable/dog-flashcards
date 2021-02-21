@@ -5,7 +5,7 @@ let dogImage = document.querySelector('#dog-image');
 let button = document.querySelector('button');
 let p = document.querySelector('p');
 
-dogImage.src = 'dogtest.jpg';
+dogImage.src = 'coooooooldog.jpg';
 
 button.addEventListener('click', (event) => {
 	p.innerText = '';
