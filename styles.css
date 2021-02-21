@@ -20,10 +20,11 @@ header {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 2em;
 	/* vertical-align: auto; */
 	width: 75%;
 	background-color: yellow;
-	border: 5px grey solid;
+	border: 5px rgb(0, 0, 0) solid;
 	border-radius: 15px;
 	/* margin: 0 auto; */
 }
@@ -34,7 +35,8 @@ div {
 }
 h1,
 h2 {
-	font-family: 'Comic Neue', cursive;
+	font-size: 12px;
+	font-family: 'Fredoka One', cursive;
 	text-align: center;
 }
 main {
@@ -52,24 +54,31 @@ main {
 	max-height: 100%;
 }
 p {
-	font-size: 50px;
+	font-family: 'Fredoka One', cursive;
+	font-size: 16px;
+	text-align: center;
 	height: 4vh;
 }
 a {
+	font-family: 'Fredoka One', cursive;
 	display: block;
-	height: 60px;
-	width: 60px;
-	line-height: 60px;
+	height: 55px;
+	width: 55px;
+	line-height: 55px;
 	-moz-border-radius: 30px; /* or 50% */
 	border-radius: 30px; /* or 50% */
 	background-color: black;
 	color: white;
 	text-align: center;
-	font-size: 2em;
+	font-size: 1em;
 	margin-top: 2em;
 }
-a:focus {
-	outline: none !important;
+a:hover {
+	background-image: linear-gradient(
+		to right,
+		rgba(255, 230, 0, 0.781),
+		rgb(253, 157, 47)
+	);
 }
 #front {
 	/* justify-content: center; */
@@ -79,8 +88,24 @@ a:focus {
 #dog-image {
 	/* width: 30em; */
 	border-radius: 12.5%;
-	max-height: 20em;
+	max-height: 12em;
+	box-shadow: 10px 10px 5px black;
 }
 .hidden {
 	height: 65px;
+}
+@media (min-width: 800px) {
+	body {
+		background-color: hotpink;
+	}
+	h1,
+	h2 {
+		font-size: 20px;
+	}
+	#dog-image {
+		max-height: 20em;
+	}
+	p {
+		font-size: 30px;
+	}
 }
