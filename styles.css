@@ -113,6 +113,9 @@ a:hover {
 	max-height: 12em;
 	box-shadow: 10px 10px 5px black;
 }
+#dog-image:hover {
+	opacity: 75%;
+}
 .hidden {
 	height: 65px;
 }
@@ -138,7 +141,6 @@ a:hover {
 	}
 	.C {
 		margin-top: 2em;
-
 	}
 	h1,
 	h2 {

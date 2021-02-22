@@ -8,6 +8,8 @@ let p = document.querySelector('#instructions');
 button.addEventListener('click', (event) => {
 	button.innerText = 'next';
 	p.innerText = 'Click image to reveal breed!';
+	p.style.color = 'black';
+	p.style.textShadow = 'none';
 	event.preventDefault();
 	console.log('you clicked doggy');
 	fetch(dogApi, {})
@@ -20,11 +22,17 @@ button.addEventListener('click', (event) => {
 			dogImage.addEventListener('click', (event) => {
 				event.preventDefault();
 				p.innerText = doge.name;
+				p.style.color = 'yellow';
+				p.style.textShadow =
+					'-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black';
 			});
 			document.addEventListener('keydown', (event) => {
 				event.preventDefault();
 				if (event.key === ' ') {
 					p.innerText = doge.name;
+					p.style.color = 'yellow';
+					p.style.textShadow =
+						'-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black';
 				}
 			});
 		})
@@ -36,6 +44,8 @@ document.addEventListener('keydown', (event) => {
 	// console.log('you clicked doggy');
 	if (event.key === 'ArrowRight') {
 		p.innerText = 'Click image to reveal breed!';
+		p.style.color = 'black';
+		p.style.textShadow = 'none';
 		fetch(dogApi, {})
 			.then((res) => res.json())
 			.then((res) => {
@@ -46,11 +56,17 @@ document.addEventListener('keydown', (event) => {
 				dogImage.addEventListener('click', (event) => {
 					event.preventDefault();
 					p.innerText = doge.name;
+					p.style.color = 'yellow';
+					p.style.textShadow =
+						'-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black';
 				});
 				document.addEventListener('keydown', (event) => {
 					event.preventDefault();
 					if (event.key === ' ') {
 						p.innerText = doge.name;
+						p.style.color = 'yellow';
+						p.style.textShadow =
+							'-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black';
 					}
 				});
 			})
@@ -63,9 +79,6 @@ document.addEventListener('keydown', (event) => {
 // multiple choice?
 // 'loading' animation
 
-
-
-
 // document.addEventListener('keydown', function onPress(event) {
 // 	if (event.key === 'ArrowRight') {
 // 		console.log('right');
@@ -73,3 +86,11 @@ document.addEventListener('keydown', (event) => {
 // 		console.log('left');
 // 	}
 // });
+
+// create an array
+// when you click start, or click to next dog, it will push the response to the array
+// when you hit start, back button appears
+// back/left arrow key will access the previous element in the array
+// right will access the element after that
+// if the element index is greater than the array, fetch another random dog from the API
+
