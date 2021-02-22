@@ -43,6 +43,10 @@ document.addEventListener('keydown', (event) => {
 				console.log(res[i]);
 				let doge = res[i];
 				dogImage.src = doge.image.url;
+				dogImage.addEventListener('click', (event) => {
+					event.preventDefault();
+					p.innerText = doge.name;
+				});
 				document.addEventListener('keydown', (event) => {
 					event.preventDefault();
 					if (event.key === ' ') {

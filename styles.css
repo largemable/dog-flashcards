@@ -71,6 +71,7 @@ a {
 	margin-top: 3em;
 }
 a:hover {
+	cursor: pointer;
 	background-image: linear-gradient(
 		to right,
 		rgba(255, 230, 0, 0.781),
@@ -84,6 +85,7 @@ a:hover {
 }
 #dog-image {
 	/* width: 30em; */
+	cursor: pointer;
 	border-radius: 12.5%;
 	max-height: 12em;
 	box-shadow: 10px 10px 5px black;
