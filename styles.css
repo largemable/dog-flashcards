@@ -62,16 +62,18 @@ a {
 	height: 55px;
 	width: 55px;
 	line-height: 55px;
-	-moz-border-radius: 30px; /* or 50% */
-	border-radius: 30px; /* or 50% */
-	background-color: black;
-	color: white;
+	-moz-border-radius: 30px;
+	border: 3px black solid;
+	border-radius: 30px;
+	background-color: yellow;
+	color: black;
 	text-align: center;
 	font-size: 1em;
 	margin-top: 3em;
 }
 a:hover {
 	cursor: pointer;
+	color: black;
 	background-image: linear-gradient(
 		to right,
 		rgba(255, 230, 0, 0.781),
