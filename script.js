@@ -1,13 +1,9 @@
 // console.log('hello world')
 let dogApi = 'https://api.thedogapi.com/v1/breeds';
-// let dogApi = 'https://api.thedogapi.com/v1/images/search';
+// generates a random dog
 let dogImage = document.querySelector('#dog-image');
 let button = document.querySelector('a');
 let p = document.querySelector('#instructions');
-
-// dogImage.src = 'coooooooldog.jpg';
-
-// generates a random dog
 
 button.addEventListener('click', (event) => {
 	button.innerText = 'next';
@@ -24,12 +20,15 @@ button.addEventListener('click', (event) => {
 			dogImage.addEventListener('click', (event) => {
 				event.preventDefault();
 				p.innerText = doge.name;
-				// dogImage.innerHTML = doge.name;
 			});
-			// console.log(doge.breeds.name.length);
+			document.addEventListener('keydown', (event) => {
+				event.preventDefault();
+				if (event.key === ' ') {
+					p.innerText = doge.name;
+				}
+			});
 		})
 		.catch((err) => console.log(err));
-	// dogImage.src = res.url;
 });
 
 document.addEventListener('keydown', (event) => {
@@ -50,14 +49,10 @@ document.addEventListener('keydown', (event) => {
 						p.innerText = doge.name;
 					}
 				});
-				// console.log(doge.breeds.name.length);
 			})
 			.catch((err) => console.log(err));
 	}
-	// dogImage.src = res.url;
 });
-
-console.log('is this thing on?');
 
 // generate a deck of ordered cards user can go back and forth between
 // "save" cards or just remove the cards that user guesses right?
