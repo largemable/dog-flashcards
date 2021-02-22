@@ -14,7 +14,7 @@ button.addEventListener('click', (event) => {
 		.then((res) => res.json())
 		.then((res) => {
 			let i = Math.ceil(Math.random() * 172);
-			console.log(res[i]);
+			// console.log(res[i]);
 			let doge = res[i];
 			dogImage.src = doge.image.url;
 			dogImage.addEventListener('click', (event) => {
@@ -33,7 +33,7 @@ button.addEventListener('click', (event) => {
 
 document.addEventListener('keydown', (event) => {
 	event.preventDefault();
-	console.log('you clicked doggy');
+	// console.log('you clicked doggy');
 	if (event.key === 'ArrowRight') {
 		p.innerText = 'Click image to reveal breed!';
 		fetch(dogApi, {})
@@ -60,7 +60,11 @@ document.addEventListener('keydown', (event) => {
 
 // generate a deck of ordered cards user can go back and forth between
 // "save" cards or just remove the cards that user guesses right?
-// multiple choice!
+// multiple choice?
+// 'loading' animation
+
+
+
 
 // document.addEventListener('keydown', function onPress(event) {
 // 	if (event.key === 'ArrowRight') {

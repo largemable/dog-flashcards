@@ -85,6 +85,27 @@ a:hover {
 	width: 30em;
 	margin: 0 auto;
 }
+/* .floating {
+	animation-name: floating;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	margin-left: 30px;
+	margin-top: 5px;
+} */
+
+@keyframes floating {
+	0% {
+		transform: translate(0, 0px);
+	}
+	50% {
+		transform: translate(0, 15px);
+	}
+	100% {
+		transform: translate(0, -0px);
+	}
+}
+
 #dog-image {
 	/* width: 30em; */
 	cursor: pointer;
@@ -115,6 +136,10 @@ a:hover {
 		);
 		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ee3d66",endColorstr="#911c57",GradientType=1);
 	}
+	.C {
+		margin-top: 2em;
+
+	}
 	h1,
 	h2 {
 		font-size: 20px;
@@ -123,6 +148,7 @@ a:hover {
 		max-height: 20em;
 	}
 	p {
-		font-size: 40px;
+		margin-top: 2em;
+		font-size: 30px;
 	}
 }
