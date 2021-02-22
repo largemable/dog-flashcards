@@ -97,7 +97,23 @@ a:hover {
 }
 @media (min-width: 800px) {
 	body {
-		background-color: hotpink;
+		background: rgb(238, 61, 102);
+		background: -moz-radial-gradient(
+			circle,
+			rgba(238, 61, 102, 1) 70%,
+			rgba(145, 28, 87, 0.9413825757575758) 100%
+		);
+		background: -webkit-radial-gradient(
+			circle,
+			rgba(238, 61, 102, 1) 70%,
+			rgba(145, 28, 87, 0.9413825757575758) 100%
+		);
+		background: radial-gradient(
+			circle,
+			rgba(238, 61, 102, 1) 70%,
+			rgba(145, 28, 87, 0.9413825757575758) 100%
+		);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ee3d66",endColorstr="#911c57",GradientType=1);
 	}
 	h1,
 	h2 {
@@ -107,6 +123,6 @@ a:hover {
 		max-height: 20em;
 	}
 	p {
-		font-size: 30px;
+		font-size: 40px;
 	}
 }
