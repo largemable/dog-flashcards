@@ -3,7 +3,7 @@ let dogApi = 'https://api.thedogapi.com/v1/breeds';
 // let dogApi = 'https://api.thedogapi.com/v1/images/search';
 let dogImage = document.querySelector('#dog-image');
 let button = document.querySelector('a');
-let p = document.querySelector('p');
+let p = document.querySelector('#instructions');
 
 // dogImage.src = 'coooooooldog.jpg';
 
@@ -33,10 +33,10 @@ button.addEventListener('click', (event) => {
 });
 
 document.addEventListener('keydown', (event) => {
-	p.innerText = 'Click image to reveal breed!';
 	event.preventDefault();
 	console.log('you clicked doggy');
 	if (event.key === 'ArrowRight') {
+		p.innerText = 'Click image to reveal breed!';
 		fetch(dogApi, {})
 			.then((res) => res.json())
 			.then((res) => {
@@ -46,7 +46,7 @@ document.addEventListener('keydown', (event) => {
 				dogImage.src = doge.image.url;
 				document.addEventListener('keydown', (event) => {
 					event.preventDefault();
-					if (event.key === 'ArrowLeft') {
+					if (event.key === ' ') {
 						p.innerText = doge.name;
 					}
 				});
