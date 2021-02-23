@@ -4,20 +4,23 @@ let dogApi = 'https://api.thedogapi.com/v1/breeds';
 let dogImage = document.querySelector('#dog-image');
 let button = document.querySelector('a');
 let p = document.querySelector('#instructions');
+let dogArray = [];
 
 button.addEventListener('click', (event) => {
+	event.preventDefault();
 	button.innerText = 'next';
 	p.innerText = 'Click image to reveal breed!';
 	p.style.color = 'black';
 	p.style.textShadow = 'none';
-	event.preventDefault();
-	console.log('you clicked doggy');
+	console.log('Clicked on button');
 	fetch(dogApi, {})
 		.then((res) => res.json())
 		.then((res) => {
 			let i = Math.ceil(Math.random() * 172);
 			// console.log(res[i]);
 			let doge = res[i];
+			dogArray.push(doge);
+			console.log(dogArray);
 			dogImage.src = doge.image.url;
 			dogImage.addEventListener('click', (event) => {
 				event.preventDefault();
@@ -43,6 +46,7 @@ document.addEventListener('keydown', (event) => {
 	event.preventDefault();
 	// console.log('you clicked doggy');
 	if (event.key === 'ArrowRight') {
+		console.log('Clicked right arrow');
 		p.innerText = 'Click image to reveal breed!';
 		p.style.color = 'black';
 		p.style.textShadow = 'none';
@@ -50,8 +54,10 @@ document.addEventListener('keydown', (event) => {
 			.then((res) => res.json())
 			.then((res) => {
 				let i = Math.ceil(Math.random() * 172);
-				console.log(res[i]);
+				// console.log(res[i]);
 				let doge = res[i];
+				dogArray.push(doge);
+				console.log(dogArray);
 				dogImage.src = doge.image.url;
 				dogImage.addEventListener('click', (event) => {
 					event.preventDefault();
@@ -93,4 +99,3 @@ document.addEventListener('keydown', (event) => {
 // back/left arrow key will access the previous element in the array
 // right will access the element after that
 // if the element index is greater than the array, fetch another random dog from the API
-
