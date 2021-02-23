@@ -2,13 +2,16 @@
 let dogApi = 'https://api.thedogapi.com/v1/breeds';
 // generates a random dog
 let dogImage = document.querySelector('#dog-image');
-let button = document.querySelector('a');
+let button = document.querySelector('#start');
 let p = document.querySelector('#instructions');
 let dogArray = [];
+let backButton = document.querySelector('#back');
+backButton.style.display = 'none';
 
 button.addEventListener('click', (event) => {
 	event.preventDefault();
 	button.innerText = 'next';
+	backButton.style.display = 'block';
 	p.innerText = 'Click image to reveal breed!';
 	p.style.color = 'black';
 	p.style.textShadow = 'none';
@@ -20,7 +23,7 @@ button.addEventListener('click', (event) => {
 			// console.log(res[i]);
 			let doge = res[i];
 			dogArray.push(doge);
-			console.log(dogArray);
+			// console.log(dogArray);
 			dogImage.src = doge.image.url;
 			dogImage.addEventListener('click', (event) => {
 				event.preventDefault();

@@ -17,6 +17,7 @@ main {
 }
 .C {
 	height: 10vh;
+	flex-direction: row;
 }
 header {
 	display: block;
@@ -58,6 +59,7 @@ p {
 	margin: -0.5vh 0 3vh 0;
 }
 a {
+	margin: 0 1em 0 1em;
 	font-family: 'Fredoka One', cursive;
 	display: block;
 	height: 55px;
@@ -81,6 +83,7 @@ a:hover {
 		rgb(253, 157, 47)
 	);
 }
+
 #front {
 	/* justify-content: center; */
 	width: 30em;
