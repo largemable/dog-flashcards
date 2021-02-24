@@ -1,6 +1,5 @@
 body {
 	height: 97vh;
-	/* font-family: sans-serif; */
 	background-color: hotpink;
 }
 
@@ -13,7 +12,7 @@ main {
 }
 .B {
 	height: 50vh;
-	/* flex-direction: column; */
+
 }
 .C {
 	height: 10vh;
@@ -24,12 +23,10 @@ header {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 2em;
-	/* vertical-align: auto; */
 	width: 75%;
 	background-color: yellow;
 	border: 5px rgb(0, 0, 0) solid;
 	border-radius: 15px;
-	/* margin: 0 auto; */
 }
 div {
 	display: flex;
@@ -85,19 +82,10 @@ a:hover {
 }
 
 #front {
-	/* justify-content: center; */
+
 	width: 30em;
 	margin: 0 auto;
 }
-/* .floating {
-	animation-name: floating;
-	animation-duration: 3s;
-	animation-iteration-count: infinite;
-	animation-timing-function: ease-in-out;
-	margin-left: 30px;
-	margin-top: 5px;
-} */
-
 @keyframes floating {
 	0% {
 		transform: translate(0, 0px);
@@ -111,7 +99,6 @@ a:hover {
 }
 
 #dog-image {
-	/* width: 30em; */
 	cursor: pointer;
 	border-radius: 12.5%;
 	max-height: 12em;
