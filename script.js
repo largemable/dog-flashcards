@@ -108,5 +108,4 @@ document.addEventListener('keydown', (event) => {
 // when you click start, or click to next dog, it will push the response to the array
 // when you hit start, back button appears
 // back/left arrow key will access the previous element in the array
-// right will access the element after that
-// if the element index is greater than the array, fetch another random dog from the API
+
