@@ -8,6 +8,13 @@ let dogArray = [];
 let backButton = document.querySelector('#back');
 backButton.style.display = 'none';
 
+const displayDog = () => {
+	// dogImage.src = currentDog.image.url;
+	p.innerText = currentDog.name;
+	p.style.color = 'yellow';
+	p.style.textShadow = '-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black';
+};
+
 button.addEventListener('click', (event) => {
 	event.preventDefault();
 	button.innerText = 'next';
@@ -24,32 +31,38 @@ button.addEventListener('click', (event) => {
 			let doge = res[i];
 			dogArray.push(doge);
 			// console.log(dogArray);
-			dogImage.src = doge.image.url;
+			currentDog = dogArray[dogArray.length - 1];
+			// console.log(currentDog);
+			dogImage.src = currentDog.image.url;
 			dogImage.addEventListener('click', (event) => {
-				event.preventDefault();
-				p.innerText = doge.name;
-				p.style.color = 'yellow';
-				p.style.textShadow =
-					'-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black';
+			event.preventDefault();
+			displayDog();
 			});
 			document.addEventListener('keydown', (event) => {
 				event.preventDefault();
 				if (event.key === ' ') {
-					p.innerText = doge.name;
-					p.style.color = 'yellow';
-					p.style.textShadow =
-						'-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black';
+					displayDog();
 				}
 			});
 		})
 		.catch((err) => console.log(err));
 });
 
+
+backButton.addEventListener('click', (event) => {
+	event.preventDefault;
+	previousDog = dogArray[dogArray.indexOf(currentDog) - 1];
+	// console.log(previousDog);
+	currentDog = previousDog;
+	dogImage.src = currentDog.image.url;
+	displayDog();
+});
+
 document.addEventListener('keydown', (event) => {
 	event.preventDefault();
 	// console.log('you clicked doggy');
 	if (event.key === 'ArrowRight') {
-		console.log('Clicked right arrow');
+		// console.log('Clicked right arrow');
 		p.innerText = 'Click image to reveal breed!';
 		p.style.color = 'black';
 		p.style.textShadow = 'none';
@@ -61,21 +74,16 @@ document.addEventListener('keydown', (event) => {
 				let doge = res[i];
 				dogArray.push(doge);
 				console.log(dogArray);
+				currentDog = dogArray[dogArray.length - 1];
 				dogImage.src = doge.image.url;
 				dogImage.addEventListener('click', (event) => {
 					event.preventDefault();
-					p.innerText = doge.name;
-					p.style.color = 'yellow';
-					p.style.textShadow =
-						'-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black';
+					displayDog();
 				});
 				document.addEventListener('keydown', (event) => {
 					event.preventDefault();
 					if (event.key === ' ') {
-						p.innerText = doge.name;
-						p.style.color = 'yellow';
-						p.style.textShadow =
-							'-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black';
+					displayDog();
 					}
 				});
 			})
