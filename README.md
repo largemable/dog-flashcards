@@ -8,4 +8,12 @@ A flashcard game that tests a user's dog breed knowledge by showing them an imag
 - User can 'flip' through flashcards
 - Cards will reveal dog breed names at user interaction
 
+### Stories
+
+- Bronze: user can access a history of dogs they already looked at
+- Silver: '3-d' Style using CSS
 ### Wireframe
+
+![Screen Shot 2021-02-18 at 9 11 04 PM](https://user-images.githubusercontent.com/77953457/109053735-aa5e0500-76a2-11eb-90f2-4a8b530e1c40.png)
+
+
