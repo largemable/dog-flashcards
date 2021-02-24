@@ -35,8 +35,8 @@ button.addEventListener('click', (event) => {
 			// console.log(currentDog);
 			dogImage.src = currentDog.image.url;
 			dogImage.addEventListener('click', (event) => {
-			event.preventDefault();
-			displayDog();
+				event.preventDefault();
+				displayDog();
 			});
 			document.addEventListener('keydown', (event) => {
 				event.preventDefault();
@@ -48,12 +48,9 @@ button.addEventListener('click', (event) => {
 		.catch((err) => console.log(err));
 });
 
-
 backButton.addEventListener('click', (event) => {
 	event.preventDefault;
-	previousDog = dogArray[dogArray.indexOf(currentDog) - 1];
-	// console.log(previousDog);
-	currentDog = previousDog;
+	currentDog = dogArray[dogArray.indexOf(currentDog) - 1];
 	dogImage.src = currentDog.image.url;
 	displayDog();
 });
@@ -61,6 +58,12 @@ backButton.addEventListener('click', (event) => {
 document.addEventListener('keydown', (event) => {
 	event.preventDefault();
 	// console.log('you clicked doggy');
+	if (event.key === 'ArrowLeft') {
+		event.preventDefault;
+		currentDog = dogArray[dogArray.indexOf(currentDog) - 1];
+		dogImage.src = currentDog.image.url;
+		displayDog();
+	}
 	if (event.key === 'ArrowRight') {
 		// console.log('Clicked right arrow');
 		p.innerText = 'Click image to reveal breed!';
@@ -83,7 +86,7 @@ document.addEventListener('keydown', (event) => {
 				document.addEventListener('keydown', (event) => {
 					event.preventDefault();
 					if (event.key === ' ') {
-					displayDog();
+						displayDog();
 					}
 				});
 			})
@@ -108,4 +111,3 @@ document.addEventListener('keydown', (event) => {
 // when you click start, or click to next dog, it will push the response to the array
 // when you hit start, back button appears
 // back/left arrow key will access the previous element in the array
-
