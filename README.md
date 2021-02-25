@@ -2,6 +2,8 @@
 
 A flashcard game that tests a user's dog breed knowledge by showing them an image of a dog, then revealing the name when the user clicks the image.
 
+![Screen Shot 2021-02-25 at 11 03 04 AM](https://user-images.githubusercontent.com/77953457/109188996-23b82f00-7759-11eb-802e-cc8baef8e08f.png)
+
 ## MVP
 
 - Flashcards will have images on them
