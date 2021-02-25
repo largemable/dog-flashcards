@@ -1,28 +1,19 @@
 body {
 	height: 97vh;
 	background-color: hotpink;
+	position: relative;
 }
 
-main {
-	max-width: 100%;
-	max-height: fit-content;
-}
-.A {
-	height: 15vh;
-}
-.B {
+.image-section {
 	height: 50vh;
-
 }
-.C {
+.control-buttons {
 	height: 10vh;
 	flex-direction: row;
 }
 header {
-	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 2em;
 	width: 75%;
 	background-color: yellow;
 	border: 5px rgb(0, 0, 0) solid;
@@ -33,6 +24,7 @@ div {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	margin: 2vh;
 }
 h1,
 h2 {
@@ -40,15 +32,12 @@ h2 {
 	font-family: 'Fredoka One', cursive;
 	text-align: center;
 }
-main {
-	height: 50vh;
-}
 
 p {
 	font-family: 'Fredoka One', cursive;
-	font-size: 16px;
+	font-size: 14px;
 	text-align: center;
-	height: 0.5vh;
+	height: 3vh;
 }
 #key-command-instructions {
 	font-size: 15px;
@@ -56,12 +45,12 @@ p {
 	margin: -0.5vh 0 3vh 0;
 }
 a {
-	margin: 0 1em 0 1em;
+	margin: 1em 1em 1em 1em;
 	font-family: 'Fredoka One', cursive;
 	display: block;
-	height: 55px;
-	width: 55px;
-	line-height: 55px;
+	height: 50px;
+	width: 50px;
+	line-height: 50px;
 	-moz-border-radius: 30px;
 	border: 3px black solid;
 	border-radius: 30px;
@@ -69,7 +58,7 @@ a {
 	color: black;
 	text-align: center;
 	font-size: 1em;
-	margin-top: 3em;
+	margin-top: 6em;
 }
 a:hover {
 	cursor: pointer;
@@ -82,26 +71,14 @@ a:hover {
 }
 
 #front {
-
 	width: 30em;
 	margin: 0 auto;
-}
-@keyframes floating {
-	0% {
-		transform: translate(0, 0px);
-	}
-	50% {
-		transform: translate(0, 15px);
-	}
-	100% {
-		transform: translate(0, -0px);
-	}
 }
 
 #dog-image {
 	cursor: pointer;
 	border-radius: 12.5%;
-	max-height: 12em;
+	max-height: 15em;
 	box-shadow: 10px 10px 5px black;
 }
 #dog-image:hover {
@@ -110,7 +87,10 @@ a:hover {
 .hidden {
 	height: 65px;
 }
-@media (min-width: 800px) {
+#instructions {
+	font-size: 22px;
+}
+@media (min-width: 820px) {
 	body {
 		background: rgb(238, 61, 102);
 		background: -moz-radial-gradient(
@@ -130,7 +110,7 @@ a:hover {
 		);
 		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ee3d66",endColorstr="#911c57",GradientType=1);
 	}
-	.C {
+	.control-buttons {
 		margin-top: 2em;
 	}
 	h1,
@@ -141,7 +121,8 @@ a:hover {
 		max-height: 20em;
 	}
 	p {
-		margin-top: 2em;
+		height: 0.5vh;
+		margin: 2em;
 		font-size: 30px;
 	}
 }
